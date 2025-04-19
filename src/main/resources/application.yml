@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: minesweeper
+
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+
+    hibernate:
+      ddl-auto: validate
+
+  datasource:
+    url: jdbc:sqlite:memory:minesweeper?cache=shared
+    username: sa
+    password: sa
+    driver-class-name: org.sqlite.JDBC
+
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
